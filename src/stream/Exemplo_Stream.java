@@ -9,8 +9,13 @@ public class Exemplo_Stream {
 		
 		List<String> estados = Arrays.asList("São Paulo", "Rio de Janeiro", "Minas Gerais", "Espirito Santo", "São Paulo",
 				"Rio de Janeiro", "Minas Gerais", "São Paulo", "Rio de Janeiro");
-								
-		System.out.println("Estados em Maiúsculo: ");
+					
+		// Construi a nossa Stream chamada estadosEmMaiuscula
+		List<String> estadosEmMaiusculo = estados.stream()
+				.map(estado -> estado.toUpperCase())
+				.collect(Collectors.toList());
+		
+		System.out.println("Estados em Maiúsculo: " + estadosEmMaiusculo);
 		System.out.println("\nEstados sem Repetição: ");
 		System.out.println("\nEstados que começam com a letra O: ");
 	}	
