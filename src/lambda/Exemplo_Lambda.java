@@ -11,17 +11,28 @@ public class Exemplo_Lambda {
 		
 		System.out.println("Exibir os itens\n");
 				
-		// Exibir os itens da Lista
-		for(int n = 0; n < 9; n++) {
-			System.out.println(n);
-		}
+		// Exibir os itens da List
+		
+		numeros.forEach(n -> System.out.println(n));
+		
+		
+		
+//		for(int n = 0; n < 9; n++) {
+//			System.out.println(n);
+//		}
 
 		System.out.println("\nExibir os itens somados com eles mesmos\n");
 		
 		// Exibir os itens da Lista dobrados
-		for(Integer n : numeros) {
-			System.out.println(n + n);
-		}
+		numeros.forEach(n -> {
+			int r = (n + n);
+			System.out.println(r);
+		});
+		
+//		for(Integer n : numeros) {
+//			System.out.println(n + n);
+//		}
 		
 	}
+
 }
